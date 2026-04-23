@@ -1,0 +1,4 @@
+#!/bin/sh
+(kill -9 $(lsof -ti:3001,5173));
+(cd server && npm run build && npm run dev) &
+(npm run build && npm run dev) & 

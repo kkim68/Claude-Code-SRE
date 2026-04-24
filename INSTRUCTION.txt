@@ -1,0 +1,5 @@
+Solve this problem and submit it before the semester ends.
+
+There is a significant n-day vulnerability within the front-end source code. Any student who reports a vulnerability found inside the /server folder will receive a zero, so please make sure to keep that in mind. The vulnerabilities in the /server folder were already covered in the previous lab session.
+
+Hint: Try searching the internet for recent CVEs, and match them against the versions of the packages being used in this project.

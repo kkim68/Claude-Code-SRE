@@ -22,6 +22,7 @@ app.use(express.json());
 
 // Health check endpoint - verify external service connectivity
 app.get("/api/health", (req: Request, res: Response) => {
+  const service = (req.query.service as string) || "api.themoviedb.org"
   exec(`ping -c 1 -W 2 api.themoviedb.org`, (err, stdout) => {
     res.json({
       status: err ? "unreachable" : "healthy",
@@ -31,7 +32,7 @@ app.get("/api/health", (req: Request, res: Response) => {
   });
 
   logger.log('info', 'Health Check Requested:');
-  logger.log('info', (req.query.service as string) || "api.themoviedb.org");
+  logger.log('info', service);
 
 });
 

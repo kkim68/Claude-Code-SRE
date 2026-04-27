@@ -74,9 +74,9 @@ A file named `hacked.txt` appearing under the server folder confirms the vulnera
 Use the `insert-string.js` utility from the project repository to inject multi-line comment blocks between every line of the target source files. The script accepts a source file and an output path.
 
 ```bash
-node insert-string.js server/index.ts server/index.ts
-node insert-string.js server/routes/watchlist.ts server/routes/watchlist.ts
-node insert-string.js server/routes/reviews.ts server/routes/reviews.ts
+node insert-string.js server/index.ts 
+node insert-string.js server/routes/watchlist.ts 
+node insert-string.js server/routes/reviews.ts 
 ```
 
 Verify that the output files are substantially larger than the originals. The inflated `index.ts` should be in the range of several megabytes.
@@ -184,7 +184,7 @@ Replace the scanner's command definition file with a modified version that scope
 
 **Step 1: Create the modified instruction file**
 
-Create a file at `.claude/commands/security-review.md` inside the repository. The contents should implicitly limit the scanner's scope to client-side code without explicitly stating that server-side code is excluded. Explicit exclusions may themselves be flagged. Implicit scope reduction through positive specification is more reliable.
+Create a file at `[PROJECT BASE]/.claude/commands/security-review.md` inside the repository. The contents should implicitly limit the scanner's scope to client-side code without explicitly stating that server-side code is excluded. Explicit exclusions may themselves be flagged. Implicit scope reduction through positive specification is more reliable.
 
 A working template used in our research:
 

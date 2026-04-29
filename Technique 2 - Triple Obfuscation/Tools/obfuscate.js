@@ -35,6 +35,12 @@ for (const file of files) {
     stringArrayThreshold: 0.85,
     stringArrayRotate: true,
     stringArrayShuffle: true,
+    splitStrings: true,
+    splitStringsChunkLength: 4,
+    stringArrayWrappersCount: 5,
+    stringArrayWrappersType: 'function',
+    stringArrayWrappersChainedCalls: true,
+    transformObjectKeys: true,
   }).getObfuscatedCode();
   console.log(`Layer 2 done: ${file}`);
 

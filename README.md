@@ -148,6 +148,8 @@ javascript-obfuscator server/dist/index.js --output server/dist/index.js \
   --control-flow-flattening true --self-defending true
 ```
 
+To make the obfuscation even stronger, please use the obfuscation script within `/Technique 2 - Triple Obfuscation` folder
+
 **Step 3: Remove the original TypeScript sources**
 
 ```bash
